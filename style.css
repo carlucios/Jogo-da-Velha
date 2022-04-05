@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoi UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: gradient 20s ease infinite;
+    background: linear-gradient(-45deg, #6f6e81, #4b486d, #4e748d, #544f6e) no-repeat;
+    background-size: 300% 300%;
+    user-select: none;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.container {
+    position: absolute;
+    transform: skew(-8deg);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+    opacity: 1;
+    background: #4d4b4bab;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.container .card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 15px 10px;
+    box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+}
+
+.container .card:hover {
+    animation: goingup 0.5s ease-out forwards;
+    cursor: pointer;
+}
+@keyframes goingup {
+    0% {
+        box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.5);
+        border-top: 1px solid rgba(0, 0, 0, 0);
+        border-left: 1px solid rgba(0, 0, 0, 0);
+    }
+    50% {
+        box-shadow: 0px;
+        border-top: 0px;
+        border-left: 0px;
+    }
+    100% {
+        box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.233);
+        border-left: 1px solid rgba(255, 255, 255, 0.233);
+    }
+}
+
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .content h2 {
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+}
+
+.container .card .content h3 {
+    font-size: 1.30em;
+    color: rgb(180, 179, 179);
+    z-index: 1;
+    animation: bouncing 0.5s ease-in alternate infinite;
+}
+
+@keyframes bouncing {
+    to {
+        transform: scale(110%)
+    }
+}
+
+.reloadImg {
+    opacity: 0.6;
+    width: 50px;
+}
+
+.reloadImg:hover {
+    animation: rotating 3s infinite;
+    cursor: pointer;
+}
+
+@keyframes rotating {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.text {
+	width: 100%;
+	height: 100vh;
+	background:  rgba(255,255,255,.2);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-weight: bold;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	display: flex;
+    align-content: flex-start;
+	max-width: 100%;
+    font-style: italic;
+    position: relative;
+    padding: 20px;
+    cursor: default;
+}
+
+span{
+	text-shadow: 0 0 20px rgba(255,255,255,.2);
+    font-size: 7em;
+}
+
+.load_game {
+    animation: has_shown 0.5s ease-out forwards;
+}
+
+@keyframes has_shown {
+    from {
+        opacity: 0;
+        transform: translateX(200px) skew(-8deg);
+    }
+    to {
+        opacity: 1;
+        transform: skew(-8deg);
+    }
+}
+
+footer {
+    position: absolute;
+    padding: 50px;
+    bottom:0;                         
+    right:0; 
+    background:  rgba(214, 16, 16, 0.336);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-weight: bold;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    font-style: italic;
+    cursor: default;
+    font-size: 4em;
