@@ -11,39 +11,19 @@
         </div>
         <div class="container load_game" style="animation-delay: 100ms">
             <div class="row">
-                <div class="card">
+                <div class="card" id="1" onclick="pickCard(1)">
                     <div class="content">
                         <h2>OX</h2>
                         <h3>Pick me</h3>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="4" onclick="pickCard(4)">
                     <div class="content">
                         <h2>OX</h2>
                         <h3>Pick me</h3>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="content">
-                        <h2>OX</h2>
-                        <h3>Pick me</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="card">
-                    <div class="content">
-                        <h2>OX</h2>
-                        <h3>Pick me</h3>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <h2>OX</h2>
-                        <h3>Pick me</h3>
-                    </div>
-                </div>
-                <div class="card">
+                <div class="card" id="7" onclick="pickCard(7)">
                     <div class="content">
                         <h2>OX</h2>
                         <h3>Pick me</h3>
@@ -51,31 +31,52 @@
                 </div>
             </div>
             <div class="row">
-                <div class="card">
+                <div class="card" id="2" onclick="pickCard(2)">
                     <div class="content">
                         <h2>OX</h2>
                         <h3>Pick me</h3>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="5" onclick="pickCard(5)">
                     <div class="content">
                         <h2>OX</h2>
                         <h3>Pick me</h3>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="8" onclick="pickCard(8)">
                     <div class="content">
                         <h2>OX</h2>
                         <h3>Pick me</h3>
                     </div>
                 </div>
             </div>
-            <div class="button">
+            <div class="row">
+                <div class="card" id="3" onclick="pickCard(3)">
+                    <div class="content">
+                        <h2>OX</h2>
+                        <h3>Pick me</h3>
+                    </div>
+                </div>
+                <div class="card" id="6" onclick="pickCard(6)">
+                    <div class="content">
+                        <h2>OX</h2>
+                        <h3>Pick me</h3>
+                    </div>
+                </div>
+                <div class="card" id="9" onclick="pickCard(9)">
+                    <div class="content">
+                        <h2>OX</h2>
+                        <h3>Pick me</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="button" onclick="restart()">
                 <img src="circular-arrow.png" class="reloadImg" alt="Restart">
             </div>
         </div>
         <footer class="load_game" style="animation-delay: 200ms">
-            <div >Jogador X</div>
+            <div id="turn">Jogador X</div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

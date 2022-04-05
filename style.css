@@ -37,7 +37,7 @@ body {
     max-width: 1000px;
     flex-wrap: wrap;
     z-index: 1;
-    opacity: 1;
+    opacity: 0;
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;  
@@ -148,6 +148,7 @@ body {
     font-style: italic;
     position: relative;
     cursor: default;
+    opacity: 0;
 }
 
 span{
@@ -175,7 +176,7 @@ footer {
     padding-bottom: 50px;
     bottom:10px;                         
     right:100px; 
-    background:  rgba(214, 16, 16, 0.336);
+    background:  rgba(161, 36, 5, 0.349);
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-weight: bold;
@@ -184,4 +185,45 @@ footer {
     font-style: italic;
     cursor: default;
     font-size: 4em;
+    opacity: 0;
 }
+
+.pickedX {
+    opacity: 0.5;
+    background-color: rgba(161, 36, 5, 0.548);
+    -webkit-transition: 1000ms linear;
+    -ms-transition: 1000ms linear;
+    transition: 1000ms linear;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 15px 10px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.233);
+    border-left: 1px solid rgba(255, 255, 255, 0.233);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pickedO {
+    opacity: 0.5;
+    background-color: rgba(5, 161, 65, 0.548);
+    -webkit-transition: 1000ms linear;
+    -ms-transition: 1000ms linear;
+    transition: 1000ms linear;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 15px 10px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.233);
+    border-left: 1px solid rgba(255, 255, 255, 0.233);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
