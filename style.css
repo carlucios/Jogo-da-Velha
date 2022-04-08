@@ -67,9 +67,14 @@ body {
 
 .disabled {
     pointer-events: none;
-    -webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-    
+    animation: disabling 0.5s forwards;
+}
+
+@keyframes disabling {
+    to {
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
 }
 
 @keyframes goingup {
@@ -217,7 +222,7 @@ section {
 
 .pickedX {
     opacity: 0.5;
-    background-color: rgba(235, 132, 132, 0.808);
+    background-color: rgb(235, 132, 132);
     -webkit-transition: 1000ms linear;
     -ms-transition: 1000ms linear;
     transition: 1000ms linear;
@@ -236,7 +241,7 @@ section {
 
 .pickedO {
     opacity: 0.5;
-    background-color: rgba(255, 0, 119, 0.726);
+    background-color: rgba(255, 0, 119, 0.568);
     -webkit-transition: 1000ms linear;
     -ms-transition: 1000ms linear;
     transition: 1000ms linear;

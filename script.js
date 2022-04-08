@@ -26,13 +26,13 @@ function pickCard(id) {
                 card.classList.remove("card");
                 card.classList.add("pickedX");
                 isWinner("X");
-                giveTurnTo("O");
+                if (winner==='') giveTurnTo("O");
             } else if (jogador =="O") {
                 card.innerHTML="<img src='rec.png' width='50%'/>";
                 card.classList.remove("card");
                 card.classList.add("pickedO");
                 isWinner("O");
-                giveTurnTo("X");
+                if (winner==='') giveTurnTo("X");
             }
         }
     }
