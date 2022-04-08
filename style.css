@@ -60,10 +60,18 @@ body {
     border-left: 1px solid rgba(0, 0, 0, 0);
 }
 
-.container .card:hover {
+.card:hover {
     animation: goingup 0.5s ease-out forwards;
     cursor: pointer;
 }
+
+.disabled {
+    pointer-events: none;
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    
+}
+
 @keyframes goingup {
     0% {
         box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.5);
@@ -176,7 +184,26 @@ footer {
     padding-bottom: 50px;
     bottom:10px;                         
     right:100px; 
-    background:  rgba(161, 36, 5, 0.349);
+    padding-right: 400px;
+    background: rgba(235, 132, 132, 0.432);   /*rgba(255, 0, 119, 0.349);*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-weight: bold;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    font-style: italic;
+    cursor: default;
+    font-size: 4em;
+    opacity: 0;
+}
+
+section {
+    position: absolute;
+    padding-bottom: 50px;
+    bottom:10px;                         
+    right:100px; 
+    padding-right: 0px;
+    background: rgba(255, 0, 119, 0.644);
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-weight: bold;
@@ -190,7 +217,7 @@ footer {
 
 .pickedX {
     opacity: 0.5;
-    background-color: rgba(161, 36, 5, 0.548);
+    background-color: rgba(235, 132, 132, 0.808);
     -webkit-transition: 1000ms linear;
     -ms-transition: 1000ms linear;
     transition: 1000ms linear;
@@ -209,7 +236,7 @@ footer {
 
 .pickedO {
     opacity: 0.5;
-    background-color: rgba(5, 161, 65, 0.548);
+    background-color: rgba(255, 0, 119, 0.726);
     -webkit-transition: 1000ms linear;
     -ms-transition: 1000ms linear;
     transition: 1000ms linear;
@@ -226,4 +253,7 @@ footer {
     align-items: center;
 }
 
-
+.winner {
+    background-color: rgb(251, 255, 0);
+    animation: bouncing 0.5s ease-in alternate infinite;
+}
